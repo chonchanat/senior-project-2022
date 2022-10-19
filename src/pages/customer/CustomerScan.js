@@ -27,7 +27,7 @@ function CustomerScan() {
                     <div className="flex flex-col items-center">
                         <p className="text-xl font-bold py-2">{fakeData[0].nameOfAct}</p>
                         <div className="pt-4 h-[150px] w-[180px] overflow-hidden">
-                            <img src={fakeData[0].image} alt="iamge of activity" />
+                            <img src={fakeData[0].image} alt="img of activity" />
                         </div>
                         <p className="mt-6 text-sm">จำนวนผู้เข้าร่วม</p>
                         <div className="flex mt-4 bg-gray-200 rounded-lg h-[40px] items-center">

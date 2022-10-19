@@ -14,7 +14,7 @@ function Home() {
                         <CardWithHead title={"คิวที่กำลังจะถึง"} bgColor={"#F8F8F8"}>
                             <div className="grid grid-cols-2 gap-4 px-2">
                                 <div>
-                                    {/* <img src={fakeData[0].image} alt="image of activity" /> */}
+                                    <img src={fakeData[0].image} alt="img of activity" />
                                 </div>
                                 <div>
                                     <p className="text-xl font-bold">{fakeData[0].nameOfAct}</p>
@@ -35,7 +35,7 @@ function Home() {
                         <></>
                 }
                 <div className="flex flex-wrap justify-between">
-                    <Card title="จองคิว" bgColor="#DFD1C6" link="/customer-scan"/>
+                    <Card title="จองคิว" bgColor="#DFD1C6" link="/customer-scan" />
                     <Card title="รายการคิว" bgColor="#BBF38F" link="/customer-myactivity" />
                     <Card title="แผนที่" bgColor="#E38181" link="/customer-map" />
                     <Card title="กิจกรรมทั้งหมด" bgColor="#F7EB84" link="/customer-activity" />

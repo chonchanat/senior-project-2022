@@ -10,8 +10,7 @@ function Card({ title, bgColor, link }) {
         }
     }
     return (
-        // <div className="w-[48%] h-[160px] rounded-xl mb-4 p-4" style={{ backgroundColor: bgColor }} onClick={goToLink}>
-        <div className={`w-[48%] h-[160px] bg-[${bgColor}] rounded-xl mb-4 p-4`} onClick={goToLink}>
+        <div className="w-[48%] h-[160px] rounded-xl mb-4 p-4" style={{ backgroundColor: bgColor }} onClick={goToLink}>
             <p className="text-center text-white text-lg font-bold">{title}</p>
         </div>
     );
