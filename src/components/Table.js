@@ -15,7 +15,7 @@ function StarRating({ rating }) {
 
 function MobileList({ MyActivity, index }) {
     return (
-        <div className="px-2 py-3 flex hover:bg-hover" key={index}>
+        <div className="py-3 flex hover:bg-hover" key={index}>
             <div className="h-full w-2/5 overflow-hidden">
                 <img src={MyActivity.image} alt="iamge of activity" />
             </div>
@@ -23,7 +23,6 @@ function MobileList({ MyActivity, index }) {
                 <p className="font-bold">{MyActivity.nameOfAct}</p>
                 <div className="flex">
                     <StarRating rating={MyActivity.rating} />
-                    {/* <img src="https://img.icons8.com/emoji/16/000000/star-emoji.png" alt="rating star"/> */}
                 </div>
                 <div className="flex justify-between mt-4">
                     <div>

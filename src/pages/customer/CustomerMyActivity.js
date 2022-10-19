@@ -9,12 +9,14 @@ function CustomerMyActivity() {
         <div>
             <Navbar />
             <Block>
-                <p className="text-right text-sm">กิจกรรมที่จอง 4/5</p>
-                {fakeData.map((data, index) => {
-                    return (
-                        <MobileList MyActivity={data} index={index}/>
-                    );
-                })}
+                <p className="text-right text-sm mb-4">กิจกรรมที่จอง 4/5</p>
+                <div className="overflow-hidden overflow-y-auto">
+                    {fakeData.map((data, index) => {
+                        return (
+                            <MobileList MyActivity={data} index={index} />
+                        );
+                    })}
+                </div>
             </Block>
         </div>
     );
