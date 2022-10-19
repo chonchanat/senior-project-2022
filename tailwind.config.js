@@ -9,6 +9,7 @@ module.exports = {
         "fha": "#5FAAF0",
         "accept": "#5FC356",
         "decline": "#F96A6A",
+        "hover": "#F8F8F8",
       },
     },
   },

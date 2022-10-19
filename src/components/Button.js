@@ -1,8 +1,10 @@
-function Button({ text, user }) {
+function Button({ title, bgColor, w="w-full", f }) {
     return (
         <div>
-            <button className="bg-accept w-full py-2 px-4 rounded-md text-white font-bold text-sm drop-shadow-md"
-                onClick={() => console.log(user)} >{text}</button>
+            <button className={`${bgColor} ${w} ${f} py-2 px-4 rounded-md text-white text-sm drop-shadow-md`}
+                onClick={() => console.log("Clicked!")}>
+                {title}
+            </button>
         </div>
     );
 }

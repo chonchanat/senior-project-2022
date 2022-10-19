@@ -3,26 +3,26 @@ import Block from '../components/Block'
 import { Card, CardWithHead } from '../components/Card'
 
 function Home() {
+
+    const queue = [];
+
     return (
         <div>
             <Navbar />
             <Block>
-                <div className="max-w-sm mx-auto">
-                    <CardWithHead bgColor={"#F8F8F8"} />
-                    <div className="flex flex-wrap justify-between">
-                        <Card bgColor={"#DFD1C6"}>
+                {
+                    queue.length ?
+                        <CardWithHead title={"คิวที่กำลังจะถึง"} bgColor={"#F8F8F8"}>
 
-                        </Card>
-                        <Card bgColor={"#BBF38F"}>
-
-                        </Card>
-                        <Card bgColor={"#E38181"}>
-
-                        </Card>
-                        <Card bgColor={"#F7EB84"}>
-
-                        </Card>
-                    </div>
+                        </CardWithHead>
+                        :
+                        <></>
+                }
+                <div className="flex flex-wrap justify-between">
+                    <Card title="จองคิว" bgColor="#DFD1C6" />
+                    <Card title="รายการคิว" bgColor="#BBF38F" />
+                    <Card title="แผนที่" bgColor="#E38181" />
+                    <Card title="กิจกรรมทั้งหมด" bgColor="#F7EB84" />
                 </div>
             </Block>
         </div>

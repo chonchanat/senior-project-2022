@@ -9,7 +9,7 @@ function Login() {
         password: "",
     });
 
-    function handleUser(e, dist) {
+    function handlerUser(e, dist) {
         var copiedUser = { ...user };
         if (dist === "username") {
             copiedUser.username = e.target.value;
@@ -34,17 +34,17 @@ function Login() {
                             <p className="text-white pb-2">Username</p>
                             <input className="w-full py-2 px-4 rounded-md"
                                 placeholder="username"
-                                onChange={(e) => handleUser(e, "username")} />
+                                onChange={(e) => handlerUser(e, "username")} />
                         </div>
                         <div className="pb-6">
                             <p className="text-white pb-2">Password</p>
                             <input className="w-full py-2 px-4 rounded-md"
                                 placeholder="password"
-                                onChange={(e) => handleUser(e, "password")} />
-                        <p className="text-right text-sm text-white pt-2 hover:underline">Forget Password?</p>
+                                onChange={(e) => handlerUser(e, "password")} />
+                            <p className="text-right text-sm text-white pt-2 hover:underline">Forget Password?</p>
                         </div>
 
-                        <Button text="Login" user={user} />
+                        <Button title="Login" bgColor="bg-accept" f="font-bold" />
                     </div>
                 </div>
             </div>
