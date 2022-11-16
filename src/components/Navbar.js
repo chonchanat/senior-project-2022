@@ -13,4 +13,13 @@ function Navbar() {
     );
 }
 
-export { Navbar };
+function StaticNavbar() {
+    return (
+        <div className="h-[50px] w-full bg-fha fixed top-0 flex items-end px-4 py-3">
+            <p className="text-xl font-bold text-white">Camel Republic</p>
+            <p className="pl-2 text-white">Senior Project</p>
+        </div>
+    );
+}
+
+export { Navbar, StaticNavbar };

@@ -4,7 +4,7 @@ import {
     createBrowserRouter,
 } from "react-router-dom";
 
-import Login from './pages/Login.js';
+import { CustomerLogin, StaffLogin } from './pages/Login.js';
 import Home from './pages/Home.js';
 import CustomerActivity from './pages/customer/CustomerActivity';
 import CustomerBookQueue from './pages/customer/CustomerBookQueue';
@@ -12,10 +12,12 @@ import CustomerMap from './pages/customer/CustomerMap';
 import CustomerMyActivity from './pages/customer/CustomerMyActivity';
 import CustomerScan from './pages/customer/CustomerScan';
 
+import StaffActivity from './pages/staff/StaffActivity';
+
 const App = createBrowserRouter([
     {
         path: "/customer-login",
-        element: <Login />,
+        element: <CustomerLogin />,
     },
     {
         path: "/customer-home",
@@ -41,6 +43,16 @@ const App = createBrowserRouter([
         path: "/customer-scan",
         element: <CustomerScan />,
     },
+
+    {
+        path: "/staff-login",
+        element: <StaffLogin />,
+    },
+    {
+        path: "/staff-activity",
+        element: <StaffActivity />,
+    },
+
     {
         path: "*",
         element: <div className="text-center">no match</div>,
