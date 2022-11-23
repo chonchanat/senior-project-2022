@@ -2,7 +2,7 @@ import { ContentDesktop, BlockDesktop } from '../../components/Block'
 import { StaticNavbar } from '../../components/Navbar'
 import SideMenuDesktop from '../../components/SideMenu/SideMenuDesktop';
 
-function StaffActivity() {
+function Template() {
     return (
         <div>
             <StaticNavbar />
@@ -15,4 +15,4 @@ function StaffActivity() {
     );
 }
 
-export default StaffActivity;
+export default Template;

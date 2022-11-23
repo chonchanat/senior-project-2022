@@ -8,4 +8,20 @@ function BlockMobile({ children }) {
     );
 }
 
-export { BlockMobile };
+function ContentDesktop({ children }) {
+    return (
+        <div className="bg-bg-desktop w-full min-h-screen pt-[50px]">
+            {children}
+        </div>
+    );
+}
+
+function BlockDesktop({ children}) {
+    return (
+        <div className="w-fit pt-4">
+            {children}
+        </div>
+    );
+}
+
+export { BlockMobile, ContentDesktop, BlockDesktop };
