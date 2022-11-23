@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 
 import { CustomerLogin, StaffLogin } from './pages/Login.js';
-import Home from './pages/Home.js';
+import CustomerHome from './pages/customer/CustomerHome.js';
 import CustomerActivity from './pages/customer/CustomerActivity';
 import CustomerBookQueue from './pages/customer/CustomerBookQueue';
 import CustomerMap from './pages/customer/CustomerMap';
@@ -21,7 +21,7 @@ const App = createBrowserRouter([
     },
     {
         path: "/customer-home",
-        element: <Home />,
+        element: <CustomerHome />,
     },
     {
         path: "/customer-activity",

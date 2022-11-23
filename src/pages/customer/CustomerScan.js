@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Navbar } from '../../components/Navbar';
-import Block from '../../components/Block'
+import { BlockMobile } from '../../components/Block'
 import { CardWithHead } from '../../components/Card';
 import { Button } from '../../components/Button';
 
@@ -22,7 +22,7 @@ function CustomerScan() {
     return (
         <div>
             <Navbar />
-            <Block>
+            <BlockMobile>
                 <CardWithHead title={"จองคิวกิจกรรม"} bgColor={"#F8F8F8"}>
                     <div className="flex flex-col items-center">
                         <p className="text-xl font-bold py-2">{fakeData[0].nameOfAct}</p>
@@ -48,7 +48,7 @@ function CustomerScan() {
                         </div>
                     </div>
                 </CardWithHead>
-            </Block>
+            </BlockMobile>
         </div>
     );
 }

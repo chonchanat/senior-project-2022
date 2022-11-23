@@ -1,5 +1,5 @@
 import { Navbar } from '../../components/Navbar'
-import Block from '../../components/Block';
+import { BlockMobile } from '../../components/Block';
 import { MobileList } from '../../components/Table';
 import { SearchWithIcon } from '../../components/Search';
 
@@ -9,7 +9,7 @@ function customerActivity() {
     return (
         <div>
             <Navbar />
-            <Block>
+            <BlockMobile>
                 <SearchWithIcon />
                 <div className="overflow-hidden overflow-y-auto">
                     {fakeData.map((data, index) => {
@@ -18,7 +18,7 @@ function customerActivity() {
                         );
                     })}
                 </div>
-            </Block>
+            </BlockMobile>
         </div>
     );
 }

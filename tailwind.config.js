@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         "fha": "#5FAAF0",
+        "fha_desktop": "77BEFF",
         "accept": "#5FC356",
         "decline": "#F96A6A",
         "hover": "#F8F8F8",

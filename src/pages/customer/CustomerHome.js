@@ -1,14 +1,14 @@
-import { Navbar } from '../components/Navbar'
-import Block from '../components/Block'
-import { Card, CardWithHead } from '../components/Card'
+import { Navbar } from '../../components/Navbar'
+import { BlockMobile } from '../../components/Block'
+import { Card, CardWithHead } from '../../components/Card'
 
-import fakeData from '../fakeData/fakeData'
+import fakeData from '../../fakeData/fakeData'
 
-function Home() {
+function CustomerHome() {
     return (
         <div>
             <Navbar />
-            <Block>
+            <BlockMobile>
                 {
                     fakeData.length ?
                         <CardWithHead title={"คิวที่กำลังจะถึง"} bgColor={"#F8F8F8"}>
@@ -40,9 +40,9 @@ function Home() {
                     <Card title="แผนที่" bgColor="#E38181" link="/customer-map" />
                     <Card title="กิจกรรมทั้งหมด" bgColor="#F7EB84" link="/customer-activity" />
                 </div>
-            </Block>
+            </BlockMobile>
         </div>
     );
 }
 
-export default Home;
+export default CustomerHome;
