@@ -10,18 +10,26 @@ function BlockMobile({ children }) {
 
 function ContentDesktop({ children }) {
     return (
-        <div className="bg-bg-desktop w-full min-h-screen pt-[50px]">
+        <div className="bg-bg-desktop w-full flex min-h-screen pt-[50px]">
             {children}
         </div>
     );
 }
 
-function BlockDesktop({ children}) {
+function BlockDesktopLeft({ children}) {
     return (
-        <div className="w-fit pt-4">
+        <div className="py-4 flex">
             {children}
         </div>
     );
 }
 
-export { BlockMobile, ContentDesktop, BlockDesktop };
+function BlockDesktopRight({ children }) {
+    return (
+        <div className="py-4 w-full">
+            {children}
+        </div>
+    );
+}
+
+export { BlockMobile, ContentDesktop, BlockDesktopLeft, BlockDesktopRight };

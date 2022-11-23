@@ -10,6 +10,9 @@ function Template() {
                 <BlockDesktop>
                     <SideMenuDesktop />
                 </BlockDesktop>
+                <BlockDesktop>
+                    
+                </BlockDesktop>
             </ContentDesktop>
         </div>
     );
