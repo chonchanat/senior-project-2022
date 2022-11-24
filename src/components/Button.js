@@ -20,4 +20,11 @@ function Button({ title, bgColor, textColor="text-white", width="w-full", font, 
     );
 }
 
-export { Button };
+function ButtonSubmit({ title, bgColor, textColor="text-white", width="w-full", font, link }) {
+    return (
+        <input type="submit" className={`${bgColor} ${width} ${font} ${textColor} py-2 px-4 rounded-md text-sm drop-shadow-md`}>
+        </input>
+    );
+}
+
+export { Button, ButtonSubmit };

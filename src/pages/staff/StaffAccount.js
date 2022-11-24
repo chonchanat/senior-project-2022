@@ -4,19 +4,12 @@ import { BlockDesktop, BlockDesktopLeft, BlockDesktopRight, HeadDesktop, Content
 import { StaticNavbar } from '../../components/Navbar'
 import SideMenuDesktop from '../../components/SideMenu/SideMenuDesktop';
 import { Button } from '../../components/Button';
-
-function CreateStaffAccount() {
-    return (
-        <div>
-            แบบฟอร์มบันทึกรายละเอียดพนักงานใหม่
-        </div>
-    );
-}
+import FormStaff from '../../components/Form/FormStaff';
 
 function StaffAccountTable() {
     return (
         <div>
-            ตารางแสดงรายชื่อพนักงาน
+            แบบฟอร์มบันทึกรายละเอียดพนักงานใหม่
         </div>
     );
 }
@@ -41,17 +34,17 @@ function StaffAccount() {
                             <div className="flex">
                                 <p className="mr-2 cursor-pointer"
                                     onClick={() => setState(false)}
-                                    >รายชื่อพนักงาน</p>
-                                <p className={`${state? "block" : "hidden"} font-normal`}>/ สร้างบัญชีพนักงาน</p>
+                                >รายชื่อพนักงาน</p>
+                                <p className={`${state ? "block" : "hidden"} font-normal`}>/ สร้างบัญชีพนักงาน</p>
                             </div>
-                            <div className={`${state? "invisible" : "visible"}`} 
-                                onClick={() => setState(1)}>
+                            <div className={`${state ? "invisible" : "visible"}`}
+                                onClick={() => setState(true)}>
                                 <Button title="สร้างบัญชีพนักงาน" bgColor="bg-[#D9D9D9]" textColor="text-black" font="font-normal" width="w-[150px]" />
                             </div>
                         </HeadContentDesktop>
                         {
-                            state ? 
-                                CreateStaffAccount()
+                            state ?
+                                <FormStaff setState={setState} />
                                 :
                                 StaffAccountTable()
                         }
