@@ -20,7 +20,7 @@ function CustomerScan() {
     }
 
     return (
-        <div>
+        <div> 
             <Navbar />
             <BlockMobile>
                 <CardWithHead title={"จองคิวกิจกรรม"} bgColor={"#F8F8F8"}>
@@ -43,8 +43,8 @@ function CustomerScan() {
                         </div>
                         <p className="mt-4 text-xs">สิทธิเข้าร่วมที่เหลือ {"5"} คน</p>
                         <div className="flex w-[220px] justify-between mt-8 mb-4">
-                            <Button title="ตกลง" bgColor="bg-accept" w="w-[100px]" />
-                            <Button title="ยกเลิก" bgColor="bg-decline" w="w-[100px]" />
+                            <Button title="ตกลง" bgColor="bg-accept" width="w-[100px]" />
+                            <Button title="ยกเลิก" bgColor="bg-decline" width="w-[100px]" />
                         </div>
                     </div>
                 </CardWithHead>

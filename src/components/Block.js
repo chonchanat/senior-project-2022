@@ -8,7 +8,7 @@ function BlockMobile({ children }) {
     );
 }
 
-function ContentDesktop({ children }) {
+function BlockDesktop({ children }) {
     return (
         <div className="bg-bg-desktop w-full flex min-h-screen pt-[50px]">
             {children}
@@ -16,7 +16,7 @@ function ContentDesktop({ children }) {
     );
 }
 
-function BlockDesktopLeft({ children}) {
+function BlockDesktopLeft({ children }) {
     return (
         <div className="py-4 flex">
             {children}
@@ -32,4 +32,28 @@ function BlockDesktopRight({ children }) {
     );
 }
 
-export { BlockMobile, ContentDesktop, BlockDesktopLeft, BlockDesktopRight };
+function HeadDesktop({ children }) {
+    return (
+        <div className="bg-fha-desktop py-4 px-8 mr-4 mb-4 rounded-xl drop-shadow-xl text-white text-xl font-bold xl:max-w-[1280px]">
+            {children}
+        </div>
+    );
+}
+
+function ContentDesktop({ children }) {
+    return (
+        <div className="min-h-[722px] bg-white pt-3 px-8 mr-4 rounded-xl drop-shadow-xl xl:max-w-[1280px]">
+            {children}
+        </div>
+    );
+}
+
+function HeadContentDesktop({ children }) {
+    return (
+        <div className="pb-3 mb-4 border-b-2 border-[#E0E0E0] flex justify-between items-center">
+            {children}
+        </div>
+    );
+}
+
+export { BlockMobile, BlockDesktop, BlockDesktopLeft, BlockDesktopRight, HeadDesktop, ContentDesktop, HeadContentDesktop };

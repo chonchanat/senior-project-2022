@@ -32,7 +32,7 @@ function CustomerLogin() {
                             <p className="text-right text-sm text-white pt-2 hover:underline">Forget Password?</p>
                         </div>
 
-                        <Button title="Login" bgColor="bg-accept" f="font-bold" link="/customer-home" />
+                        <Button title="Login" bgColor="bg-accept" font="font-bold" link="/customer-home" />
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ function StaffLogin() {
                             <p className="text-right text-sm text-white pt-2 hover:underline">Forget Password?</p>
                         </div>
 
-                        <Button title="Login" bgColor="bg-accept" f="font-bold" link="/customer-home" />
+                        <Button title="Login" bgColor="bg-accept" font="font-bold" link="/customer-home" />
                     </div>
                 </div>
             </div>

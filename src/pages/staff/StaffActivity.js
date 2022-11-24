@@ -1,4 +1,4 @@
-import { ContentDesktop, BlockDesktopLeft, BlockDesktopRight } from '../../components/Block'
+import { BlockDesktop, BlockDesktopLeft, BlockDesktopRight, HeadDesktop, ContentDesktop, HeadContentDesktop } from '../../components/Block'
 import { StaticNavbar } from '../../components/Navbar'
 import SideMenuDesktop from '../../components/SideMenu/SideMenuDesktop';
 
@@ -6,14 +6,24 @@ function StaffActivity() {
     return (
         <div>
             <StaticNavbar />
-            <ContentDesktop>
+            <BlockDesktop>
                 <BlockDesktopLeft>
                     <SideMenuDesktop />
                 </BlockDesktopLeft>
                 <BlockDesktopRight>
-                    <p>Content Section</p>   
+                    <HeadDesktop>
+                        <p>กิจกรรมทั้งหมด</p>
+                    </HeadDesktop>
+                    <ContentDesktop>
+                        <HeadContentDesktop>
+                            <p>รายชื่อกิจกรรม</p>
+                        </HeadContentDesktop>
+                        <div className="">
+
+                        </div>
+                    </ContentDesktop>
                 </BlockDesktopRight>
-            </ContentDesktop>
+            </BlockDesktop>
         </div>
     );
 }
