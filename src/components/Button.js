@@ -20,11 +20,19 @@ function Button({ title, bgColor, textColor="text-white", width="w-full", font, 
     );
 }
 
-function ButtonSubmit({ title, bgColor, textColor="text-white", width="w-full", font, link }) {
+function ButtonSubmit({ bgColor, textColor="text-white", width="w-full", font, link }) {
     return (
         <input type="submit" className={`${bgColor} ${width} ${font} ${textColor} py-2 px-4 rounded-md text-sm drop-shadow-md`}>
         </input>
     );
 }
 
-export { Button, ButtonSubmit };
+function ButtonTransparent({color, width="w-fit", children}) {
+    return (
+        <div className={`${width} border-${color} text-${color} border text-center py-1 px-1 rounded-md cursor-pointer`}>
+            {children}
+        </div>
+    );
+}
+
+export { Button, ButtonSubmit, ButtonTransparent };

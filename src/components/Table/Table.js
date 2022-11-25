@@ -8,7 +8,7 @@ function TableHead({ children }) {
 
 function TableBody({ children }) {
     return (
-        <p className="text-center w-[20%] last:invisible group-hover:visible">
+        <p className="flex justify-center w-[20%] last:invisible group-hover:visible">
             {children}
         </p>
     );
@@ -16,7 +16,7 @@ function TableBody({ children }) {
 
 function TableRow({ children, condition }) {
     return (
-        <div className={`flex justify-around py-4 border-b-2 border-[#E0E0E0] ${condition === "head" ? "" : "hover:bg-[#F4F4F4]"} group`}>
+        <div className={`flex justify-around items-center py-4 border-b-2 border-[#E0E0E0] ${condition === "head" ? "" : "hover:bg-[#F4F4F4]"} group`}>
             {children}
         </div>
     );
