@@ -14,6 +14,7 @@ import CustomerScan from './pages/customer/CustomerScan';
 
 import StaffActivity from './pages/staff/StaffActivity';
 import StaffAccount from './pages/staff/StaffAccount';
+import CustomerAccount from './pages/staff/CustomerAccount';
 
 const App = createBrowserRouter([
     {
@@ -56,6 +57,10 @@ const App = createBrowserRouter([
     {
         path: "/staff-account",
         element: <StaffAccount />,
+    },
+    {
+        path: "/staff-customer-account",
+        element: <CustomerAccount />,
     },
 
     {

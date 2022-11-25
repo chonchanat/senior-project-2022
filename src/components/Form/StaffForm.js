@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import { Button, ButtonSubmit } from '../../components/Button';
+import { Button, ButtonSubmit } from '../Button';
 
-function FormStaff({setState}) {
+function StaffForm({setState}) {
 
     const [form, setForm] = useState({
         name: "",
@@ -61,4 +61,4 @@ function FormStaff({setState}) {
     );
 }
 
-export default FormStaff;
+export default StaffForm;

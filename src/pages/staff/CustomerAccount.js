@@ -4,17 +4,17 @@ import { BlockDesktop, BlockDesktopLeft, BlockDesktopRight, HeadDesktop, Content
 import { StaticNavbar } from '../../components/Navbar'
 import SideMenuDesktop from '../../components/SideMenu/SideMenuDesktop';
 import { Button } from '../../components/Button';
-import StaffForm from '../../components/Form/StaffForm';
+import CustomerForm from '../../components/Form/CustomerForm';
 
-function StaffAccountTable() {
+function CustomerAccountTable() {
     return (
         <div>
-            แบบฟอร์มบันทึกรายละเอียดพนักงานใหม่
+
         </div>
     );
 }
 
-function StaffAccount() {
+function CustomerAccount() {
 
     const [state, setState] = useState(false);
 
@@ -27,15 +27,15 @@ function StaffAccount() {
                 </BlockDesktopLeft>
                 <BlockDesktopRight>
                     <HeadDesktop>
-                        <p>ระบบบัญชีพนักงาน</p>
+                        <p>ระบบบัญชีลูกค้า</p>
                     </HeadDesktop>
                     <ContentDesktop>
                         <HeadContentDesktop>
-                            <div className="flex">
+                        <div className="flex">
                                 <p className="mr-2 cursor-pointer"
                                     onClick={() => setState(false)}
-                                >รายชื่อพนักงาน</p>
-                                <p className={`${state ? "block" : "hidden"} font-normal`}>/ สร้างบัญชีพนักงาน</p>
+                                >รายชื่อลูกค้า</p>
+                                <p className={`${state ? "block" : "hidden"} font-normal`}>/ สร้างบัญชีลูกค้า</p>
                             </div>
                             <div className={`${state ? "invisible" : "visible"}`}
                                 onClick={() => setState(true)}>
@@ -44,9 +44,9 @@ function StaffAccount() {
                         </HeadContentDesktop>
                         {
                             state ?
-                                <StaffForm setState={setState} />
+                                <CustomerForm setState={setState} />
                                 :
-                                StaffAccountTable()
+                                CustomerAccountTable()
                         }
                     </ContentDesktop>
                 </BlockDesktopRight>
@@ -55,4 +55,4 @@ function StaffAccount() {
     );
 }
 
-export default StaffAccount;
+export default CustomerAccount;

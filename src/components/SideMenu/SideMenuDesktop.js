@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom'
+
 import { CgProfile } from 'react-icons/cg';
 import { AiFillHome } from 'react-icons/ai';
 import { BiLogOut } from 'react-icons/bi';
@@ -7,6 +9,9 @@ import { GiBilledCap } from 'react-icons/gi';
 import { IoMdSettings } from 'react-icons/io';
 
 function SideMenuDesktop() {
+
+    const navigate = useNavigate();
+
     return (
         <div className="h-full">
             <div className="w-[50px] h-[800px] bg-fha-desktop rounded-xl drop-shadow-xl mx-4 xl:w-[300px] xl:px-6 xl:pt-6 xl:pb-4 hidden xl:block">
@@ -28,11 +33,13 @@ function SideMenuDesktop() {
                         <RiArtboardFill size="20px" />
                         <p className="pl-2">Dashboard</p>
                     </div>
-                    <div className="px-5 py-3 rounded-md hover:bg-white hover:text-black flex cursor-pointer">
+                    <div className="px-5 py-3 rounded-md hover:bg-white hover:text-black flex cursor-pointer"
+                        onClick={() => navigate("/staff-customer-account")}>
                         <MdPeople size="20px" />
                         <p className="pl-2">ระบบบัญชีลูกค้า</p>
                     </div>
-                    <div className="px-5 py-3 rounded-md hover:bg-white hover:text-black flex cursor-pointer">
+                    <div className="px-5 py-3 rounded-md hover:bg-white hover:text-black flex cursor-pointer"
+                        onClick={() => navigate("/staff-account")}>
                         <GiBilledCap size="20px" />
                         <p className="pl-2">ระบบบัญชีพนักงาน</p>
                     </div>
