@@ -13,6 +13,7 @@ module.exports = {
         "decline": "#F96A6A",
         "hover": "#F8F8F8",
       },
+      visibility: ["group-hover"],
     },
   },
   plugins: [],

@@ -4,8 +4,9 @@ import {
     createBrowserRouter,
 } from "react-router-dom";
 
-import { CustomerLogin, StaffLogin } from './pages/Login.js';
-import CustomerHome from './pages/customer/CustomerHome.js';
+import { CustomerLogin, StaffLogin } from './pages/Login';
+
+import CustomerHome from './pages/customer/CustomerHome';
 import CustomerActivity from './pages/customer/CustomerActivity';
 import CustomerBookQueue from './pages/customer/CustomerBookQueue';
 import CustomerMap from './pages/customer/CustomerMap';
@@ -15,6 +16,8 @@ import CustomerScan from './pages/customer/CustomerScan';
 import StaffActivity from './pages/staff/StaffActivity';
 import StaffAccount from './pages/staff/StaffAccount';
 import CustomerAccount from './pages/staff/CustomerAccount';
+
+import Test from './pages/Test';
 
 const App = createBrowserRouter([
     {
@@ -66,6 +69,10 @@ const App = createBrowserRouter([
     {
         path: "*",
         element: <div className="text-center">no match</div>,
+    },
+    {
+        path: "/test",
+        element: <Test />,
     },
 ]);
 
