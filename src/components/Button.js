@@ -28,7 +28,6 @@ function ButtonSubmit({ bgColor, textColor="text-white", width="w-full", font, l
 }
 
 function ButtonTransparent({color, width="w-fit", children}) {
-    console.log(color)
     return (
         <div className={`${width} border-${color} text-${color} border text-center py-1 px-1 rounded-md cursor-pointer hover:bg-white`}>
             {children}
