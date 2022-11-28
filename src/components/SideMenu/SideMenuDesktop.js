@@ -14,7 +14,7 @@ function SideMenuDesktop() {
 
     return (
         <div className="h-full">
-            <div className="w-[50px] h-[800px] bg-fha-desktop rounded-xl drop-shadow-xl mx-4 xl:w-[300px] xl:px-6 xl:pt-6 xl:pb-4 hidden xl:block">
+            <div className="w-[50px] h-full bg-fha-desktop rounded-xl drop-shadow-xl mx-4 xl:w-[300px] xl:px-6 xl:pt-6 xl:pb-4 hidden xl:block">
                 <div className="h-[10%] border-b-2 border-white flex">
                     <div className="pr-2">
                         <CgProfile size="56px" color="white" />
@@ -43,7 +43,8 @@ function SideMenuDesktop() {
                         <GiBilledCap size="20px" />
                         <p className="pl-2">ระบบบัญชีพนักงาน</p>
                     </div>
-                    <div className="px-5 py-3 rounded-md hover:bg-white hover:text-black flex cursor-pointer">
+                    <div className="px-5 py-3 rounded-md hover:bg-white hover:text-black flex cursor-pointer"
+                        onClick={() => navigate("/staff-activity")}>
                         <RiGamepadFill size="20px" />
                         <p className="pl-2">กิจกรรมทั้งหมด</p>
                     </div>
