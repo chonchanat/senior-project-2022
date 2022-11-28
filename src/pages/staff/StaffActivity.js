@@ -4,6 +4,7 @@ import { BlockDesktop, BlockDesktopLeft, BlockDesktopRight, HeadDesktop, Content
 import { StaticNavbar } from '../../components/Navbar';
 import SideMenuDesktop from '../../components/SideMenu/SideMenuDesktop';
 import { Button } from '../../components/Button';
+import ActivityForm from '../../components/Form/ActivityForm';
 
 import {
     TableHead,
@@ -15,8 +16,7 @@ import {
 import ActivityData from '../../fakeData/ActivityData';
 import { ButtonTransparent } from '../../components/Button';
 
-import { HiOutlinePencil } from 'react-icons/hi';
-import { RiDeleteBin5Line } from 'react-icons/ri';
+import { IoMdSettings } from 'react-icons/io';
 
 function ActivityTable() {
     return (
@@ -38,12 +38,8 @@ function ActivityTable() {
                         <TableBody>{row.duration}</TableBody>
                         <TableBody>{row.rating}</TableBody>
                         <TableBody>
-                            <ButtonTransparent color="accept">
-                                <HiOutlinePencil size="24px" />
-                            </ButtonTransparent>
-                            <div className="w-[16px]" />
-                            <ButtonTransparent color="decline">
-                                <RiDeleteBin5Line size="24px" />
+                            <ButtonTransparent>
+                                <IoMdSettings size="24px" />
                             </ButtonTransparent>
                         </TableBody>
                     </TableRow>
@@ -84,8 +80,7 @@ function StaffActivity() {
                         </HeadContentDesktop>
                         {
                             state ?
-                                // <CustomerForm setState={setState} />
-                                <></>
+                                <ActivityForm setState={setState} />
                                 :
                                 ActivityTable()
                         }
