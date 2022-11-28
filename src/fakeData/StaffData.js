@@ -12,7 +12,7 @@ const StaffData = [
         email: "pokpong.n@ku.th",
         phone: "09xxxxxxx",
         role: "administrator",
-    },
+    },  
 ]
 
 export default StaffData;
