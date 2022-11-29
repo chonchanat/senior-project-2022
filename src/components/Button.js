@@ -27,9 +27,10 @@ function ButtonSubmit({ bgColor, textColor="text-white", width="w-full", font, l
     );
 }
 
-function ButtonTransparent({color, width="w-fit", children}) {
+function ButtonTransparent({color, width="w-fit", handlerClick, children}) {
     return (
-        <div className={`${width} border-${color} text-${color} border text-center py-1 px-1 rounded-md cursor-pointer hover:bg-white`}>
+        <div className={`${width} border-${color} text-${color} border text-center py-1 px-1 rounded-md cursor-pointer hover:bg-white`}
+            onClick={handlerClick}>
             {children}
         </div>
     );

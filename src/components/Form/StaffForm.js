@@ -12,14 +12,14 @@ function StaffForm({setState}) {
         role: "",
     });
 
-    function handleSubmit(event) {
+    function handlerSubmit(event) {
         event.preventDefault();
         console.log(form);
     }
 
     return (
         <div className="flex justify-center">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handlerSubmit}>
                 <label className="w-[650px] flex justify-between items-center mb-4">ชื่อ
                     <input type="text" className="w-[500px] h-[36px] border-black rounded-md border px-6"
                         onChange={(e) => setForm({ ...form, name: e.target.value })} />

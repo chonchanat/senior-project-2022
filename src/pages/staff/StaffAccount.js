@@ -68,7 +68,7 @@ function StaffAccount() {
                     </HeadDesktop>
                     <ContentDesktop>
                         <HeadContentDesktop>
-                            <div className="flex">
+                            <div className="flex py-2">
                                 <p className="mr-2 cursor-pointer"
                                     onClick={() => setState(false)}
                                 >รายชื่อพนักงาน</p>

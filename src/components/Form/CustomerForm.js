@@ -12,14 +12,14 @@ function CustomerForm({ setState }) {
         star: "",
     });
 
-    function handleSubmit(event) {
+    function handlerSubmit(event) {
         event.preventDefault();
         console.log(form);
     }
 
     return (
         <div className="flex justify-center">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handlerSubmit}>
                 <label className="w-[650px] flex justify-between items-center mb-4">เบอร์โทร
                     <input type="tel" className="w-[500px] h-[36px] border-black rounded-md border px-6"
                         onChange={(e) => setForm({ ...form, phone: e.target.value })} />

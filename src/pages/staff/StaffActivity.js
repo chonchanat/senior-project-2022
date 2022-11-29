@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { BlockDesktop, BlockDesktopLeft, BlockDesktopRight, HeadDesktop, ContentDesktop, HeadContentDesktop } from '../../components/Block';
 import { StaticNavbar } from '../../components/Navbar';
@@ -19,6 +20,13 @@ import { ButtonTransparent } from '../../components/Button';
 import { IoMdSettings } from 'react-icons/io';
 
 function ActivityTable() {
+
+    const navigate = useNavigate();
+
+    function handlerClick(id) {
+        navigate(`/staff-activity/${id}`);
+    }
+
     return (
         <div>
             <TableRow condition="head">
@@ -38,7 +46,7 @@ function ActivityTable() {
                         <TableBody>{row.duration}</TableBody>
                         <TableBody>{row.rating}</TableBody>
                         <TableBody>
-                            <ButtonTransparent>
+                            <ButtonTransparent handlerClick={() => handlerClick(row.id)}>
                                 <IoMdSettings size="24px" />
                             </ButtonTransparent>
                         </TableBody>
@@ -67,7 +75,7 @@ function StaffActivity() {
                     </HeadDesktop>
                     <ContentDesktop>
                         <HeadContentDesktop>
-                            <div className="flex">
+                            <div className="flex py-2">
                                 <p className="mr-2 cursor-pointer"
                                     onClick={() => setState(false)}
                                 >รายชื่อกิจกรรม</p>
@@ -82,7 +90,7 @@ function StaffActivity() {
                             state ?
                                 <ActivityForm setState={setState} />
                                 :
-                                ActivityTable()
+                                <ActivityTable />
                         }
                     </ContentDesktop>
                 </BlockDesktopRight>

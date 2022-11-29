@@ -14,14 +14,14 @@ function ActivityForm({ setState }) {
         star: "",
     });
 
-    function handleSubmit(event) {
+    function handlerSubmit(event) {
         event.preventDefault();
         console.log(form);
     }
 
     return (
         <div className="flex justify-center">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handlerSubmit}>
                 <div className="flex flex-wrap">
                     <div className="w-[200px] flex justify-center items-center mr-20">
                         <AiOutlinePicture size="200px" />
