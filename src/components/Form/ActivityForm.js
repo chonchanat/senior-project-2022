@@ -33,34 +33,31 @@ function ActivityForm({ setState }) {
                         </label>
                         <label className="w-[550px] flex justify-between items-center mb-4">จำนวนผู้เข้าร่วม
                             <div className="flex">
-                                <input type="number" className="w-[352px] h-[36px] border-black rounded-md border px-6"
+                                <input type="number" className="w-[320px] h-[36px] border-black rounded-md border px-6"
                                     onChange={(e) => setForm({ ...form, size: e.target.value })} />
-                                <p className="w-12 text-right">คน</p>
+                                <p className="w-20 flex justify-end items-center">คน/รอบ</p>
                             </div>
                         </label>
                         <label className="w-[550px] flex justify-between items-center mb-4">ระยะเวลาเล่น
                             <div className="flex">
-                                <input type="number" className="w-[352px] h-[36px] border-black rounded-md border px-6"
+                                <input type="number" className="w-[320px] h-[36px] border-black rounded-md border px-6"
                                     onChange={(e) => setForm({ ...form, duration: e.target.value })} />
-                                <p className="w-12 text-right">นาที</p>
+                                <p className="w-20 flex justify-end items-center">นาที/รอบ</p>
                             </div>
-
                         </label>
                         <label className="w-[550px] flex justify-between items-center mb-4">ระยะเวลารอ
                             <div className="flex">
-                                <input type="number" className="w-[352px] h-[36px] border-black rounded-md border px-6"
+                                <input type="number" className="w-[320px] h-[36px] border-black rounded-md border px-6"
                                     onChange={(e) => setForm({ ...form, waitingTime: e.target.value })} />
-                                <p className="w-12 text-right">นาที</p>
+                                <p className="w-20 flex justify-end items-center">นาที</p>
                             </div>
-
                         </label>
                         <label className="w-[550px] flex justify-between items-center mb-4">จำนวนดาว
                             <div className="flex">
-                                <input type="number" className="w-[352px] h-[36px] border-black rounded-md border px-6"
+                                <input type="number" className="w-[320px] h-[36px] border-black rounded-md border px-6"
                                     onChange={(e) => setForm({ ...form, star: e.target.value })} />
-                                <p className="w-12 text-right">ดวง</p>
+                                <p className="w-20 flex justify-end items-center">ดวง/คน</p>
                             </div>
-
                         </label>
                     </div>
                 </div>

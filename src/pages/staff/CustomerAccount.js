@@ -85,7 +85,7 @@ function CustomerAccount() {
                             state ?
                                 <CustomerForm setState={setState} />
                                 :
-                                CustomerAccountTable()
+                                <CustomerAccountTable />
                         }
                     </ContentDesktop>
                 </BlockDesktopRight>

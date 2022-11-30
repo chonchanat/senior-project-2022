@@ -17,7 +17,7 @@ function SideMenuDesktop() {
             <div className="w-[50px] h-full bg-fha-desktop rounded-xl drop-shadow-xl mx-4 xl:w-[300px] xl:px-6 xl:pt-6 xl:pb-4 hidden xl:block">
                 <div className="h-[10%] border-b-2 border-white flex">
                     <div className="pr-2">
-                        <CgProfile size="56px" color="white" />
+                        <CgProfile size="56px" color="black" />
                     </div>
                     <div className="truncate pt-1">
                         <p className="text-xl font-bold">Chonchanat Tubtiang</p>

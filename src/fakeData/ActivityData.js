@@ -4,6 +4,8 @@ const ActivityData = [
         code: "CPE001",
         status: "open",
         name: "รถไฟเหาะ",
+        image: "https://www.changtrixget.com/wp-content/uploads/2018/09/superman-krypton-coaster.jpg",
+        waitingTime: 3,
         size: 20,
         duration: 5,
         star: 12,

@@ -83,7 +83,7 @@ function StaffAccount() {
                             state ?
                                 <StaffForm setState={setState} />
                                 :
-                                StaffAccountTable()
+                                <StaffAccountTable />
                         }
                     </ContentDesktop>
                 </BlockDesktopRight>
