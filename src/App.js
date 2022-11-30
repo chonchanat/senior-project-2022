@@ -75,7 +75,6 @@ const App = createBrowserRouter([
     {
         path: "/*",
         element: <Navigate to="/customer-login" />,
-        // element: <div className="text-center">no match</div>,
     },
     {
         path: "/test",

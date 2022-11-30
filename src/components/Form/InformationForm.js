@@ -33,7 +33,7 @@ function InformationForm({ data }) {
                     <div className="flex justify-between w-[70%]">
                         <input type="number" className="h-[36px] border-black rounded-md border px-6"
                             value={form.duration}
-                            onChange={(e) => setForm({ ...form, size: e.target.value })} />
+                            onChange={(e) => setForm({ ...form, duration: e.target.value })} />
                         <p className="w-20 flex justify-end items-center">นาที/รอบ</p>
                     </div>
                 </label>
@@ -41,7 +41,7 @@ function InformationForm({ data }) {
                     <div className="flex justify-between w-[70%]">
                         <input type="number" className="h-[36px] border-black rounded-md border px-6"
                             value={form.waitingTime}
-                            onChange={(e) => setForm({ ...form, size: e.target.value })} />
+                            onChange={(e) => setForm({ ...form, waitingTime: e.target.value })} />
                         <p className="w-20 flex justify-end items-center">นาที</p>
                     </div>
                 </label>
@@ -49,7 +49,7 @@ function InformationForm({ data }) {
                     <div className="flex justify-between w-[70%]">
                         <input type="number" className="h-[36px] border-black rounded-md border px-6"
                             value={form.star}
-                            onChange={(e) => setForm({ ...form, size: e.target.value })} />
+                            onChange={(e) => setForm({ ...form, star: e.target.value })} />
                         <p className="w-20 flex justify-end items-center">ดวง/คน</p>
                     </div>
                 </label>
