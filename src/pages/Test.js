@@ -67,7 +67,7 @@ function Test() {
                         <DropdownButton click={() => setState({ ...state, dropdown: !state.dropdown })}>
                             <BsThreeDots size="28px" />
                         </DropdownButton>
-                        <DropdownBody state={state.dropdown}>
+                        <DropdownBody state={state.dropdown} offset="right-0">
                             <DropdownMenu>แก้ไขรายละเอียด</DropdownMenu>
                             <DropdownMenu>ปิดปรับปรุง</DropdownMenu>
                             <DropdownMenu>ลบกิจกรรม</DropdownMenu>
