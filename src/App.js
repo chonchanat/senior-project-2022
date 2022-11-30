@@ -2,6 +2,7 @@ import './global.css';
 
 import {
     createBrowserRouter,
+    Navigate
 } from "react-router-dom";
 
 import { CustomerLogin, StaffLogin } from './pages/Login';
@@ -72,8 +73,9 @@ const App = createBrowserRouter([
     },
 
     {
-        path: "*",
-        element: <div className="text-center">no match</div>,
+        path: "/*",
+        element: <Navigate to="/customer-login" />,
+        // element: <div className="text-center">no match</div>,
     },
     {
         path: "/test",
