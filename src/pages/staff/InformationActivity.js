@@ -46,7 +46,8 @@ function HandlerDropdown({ state, setState }) {
                 </DropdownButton>
                 <DropdownBody state={state.dropState} offset="right-0">
                     <DropdownMenu click={() => setState({ ...state, editState: false, dropState: false })}>แก้ไขรายละเอียด</DropdownMenu>
-                    <DropdownMenu>ปิดปรับปรุง</DropdownMenu>
+                    <DropdownMenu>ปิดปรับปรุงชั่วคราว</DropdownMenu>
+                    <DropdownMenu>ปิดให้บริการ</DropdownMenu>
                     <DropdownMenu>ลบกิจกรรม</DropdownMenu>
                 </DropdownBody>
             </Dropdown>

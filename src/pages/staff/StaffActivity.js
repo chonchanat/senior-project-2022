@@ -46,7 +46,7 @@ function ActivityTable() {
                         <TableBody>{row.duration}</TableBody>
                         <TableBody>{row.rating}</TableBody>
                         <TableBody>
-                            <ButtonTransparent handlerClick={() => handlerClick(row.id)}>
+                            <ButtonTransparent click={() => handlerClick(row.id)}>
                                 <IoMdSettings size="24px" />
                             </ButtonTransparent>
                         </TableBody>

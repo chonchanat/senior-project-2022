@@ -7,7 +7,7 @@ import {
 } from '../components/Table/Table'
 
 import StaffData from '../fakeData/StaffData';
-import { ButtonTransparent } from '../components/Button';
+import { Button, ButtonTransparent } from '../components/Button';
 
 import {
     DropdownButton,
@@ -17,6 +17,14 @@ import {
 } from '../components/Dropdown';
 import Wrapper from '../components/Wrapper';
 
+import {
+    Popup,
+    PopupCard,
+    PopupHeader,
+    PopupBody,
+    PopupAction,
+} from '../components/Popup';
+
 import { HiOutlinePencil } from 'react-icons/hi';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { BsThreeDots } from 'react-icons/bs';
@@ -25,7 +33,9 @@ function Test() {
 
     const [state, setState] = useState({
         dropdown: false,
+        popup: false,
     })
+    console.log(state);
 
     return (
         <div className="w-full min-h-screen bg-fha flex justify-center items-center">
@@ -67,7 +77,7 @@ function Test() {
                         <DropdownButton click={() => setState({ ...state, dropdown: !state.dropdown })}>
                             <BsThreeDots size="28px" />
                         </DropdownButton>
-                        <DropdownBody state={state.dropdown} offset="right-0">
+                        <DropdownBody state={state.dropdown}>
                             <DropdownMenu>แก้ไขรายละเอียด</DropdownMenu>
                             <DropdownMenu>ปิดปรับปรุง</DropdownMenu>
                             <DropdownMenu>ลบกิจกรรม</DropdownMenu>
@@ -77,6 +87,27 @@ function Test() {
                 <p>ฺHey, Jude</p>
                 <p>ฺHey, Jude</p>
                 <p>ฺHey, Jude</p>
+
+                <div>
+                    <p>Popup version 1.0</p>
+                    <ButtonTransparent click={() => setState({ ...state, popup: !state.popup })}>Popup</ButtonTransparent>
+                    <Popup state={state.popup}>
+                        <Wrapper state={state.popup}
+                            bgColor="bg-black/20"
+                            click={() => setState({ ...state, popup: !state.popup })} />
+                        <PopupCard>
+                            <PopupHeader>ลบกิจกรรม</PopupHeader>
+                            <PopupBody>
+                                <p>คุณยืนยันที่จะลบกิจกรรม <label className="font-bold">เพลงดาบล่องนภา</label> ออกจากรายการกิจกรรมอย่างถาวร?</p>
+                            </PopupBody>
+                            <PopupAction>
+                                <Button title="ตกลง" bgColor="bg-accept" textColor="text-white" width="w-28" />
+                                <div className="w-8" />
+                                <Button title="ยกเลิก" bgColor="bg-decline" textColor="text-white" width="w-28" />
+                            </PopupAction>
+                        </PopupCard>
+                    </Popup>
+                </div>
             </div>
         </div>
     );

@@ -9,7 +9,7 @@ function DropdownButton({ click, children }) {
 
 function DropdownBody({ state, offset="left-0", children }) {
     return (
-        <div className={`w-[200px] bg-white px-2 py-2 border-2 border-[#E0E0E0] rounded-md shadow-xl absolute top-10 z-50 ${offset}
+        <div className={`min-w-[200px] bg-white px-2 py-2 border-2 border-[#E0E0E0] rounded-md shadow-xl absolute top-10 z-50 ${offset}
             ${state ? "block" : "hidden"}`}>
             {children}
         </div>
@@ -27,7 +27,7 @@ function DropdownMenu({ click, children }) {
 
 function Dropdown({ children }) {
     return (
-        <div className="w-fit relative">
+        <div className="relative">
             {children}
         </div>
     );
