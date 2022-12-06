@@ -18,6 +18,7 @@ import StaffActivity from './pages/staff/StaffActivity';
 import StaffAccount from './pages/staff/StaffAccount';
 import CustomerAccount from './pages/staff/CustomerAccount';
 import InformationActivity from './pages/staff/InformationActivity';
+import Setting from './pages/staff/Setting';
 
 import Test from './pages/Test';
 
@@ -70,6 +71,10 @@ const App = createBrowserRouter([
     {
         path: "/staff-activity/:id",
         element: <InformationActivity />,
+    },
+    {
+        path: "/staff-setting",
+        element: <Setting />,
     },
 
     {

@@ -51,7 +51,8 @@ function SideMenuDesktop() {
                 </div>
                 <div className="h-[15%] border-t-2 border-white">
                     <div className="h-[75%] py-4 font-bold text-white">
-                        <div className="px-5 py-3 rounded-md hover:bg-white hover:text-black flex cursor-pointer">
+                        <div className="px-5 py-3 rounded-md hover:bg-white hover:text-black flex cursor-pointer"
+                            onClick={() => navigate("/staff-setting")}>
                             <IoMdSettings size="20px" />
                             <p className="pl-2">ตั้งค่าบัญชี</p>
                         </div>
