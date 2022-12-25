@@ -16,11 +16,11 @@ function Card({ title, bgColor, link }) {
     );
 }
 
-function CardWithHead({ title, bgColor, children }) {
+function CardWithHead({ title, bgColor="#F8F8F8", children }) {
     return (
         <div className="w-full rounded-xl mb-4 overflow-hidden" style={{ backgroundColor: bgColor }}>
-            <p className="text-center bg-fha py-1 text-white">{title}</p>
-            <div className="h-auto p-4">
+            <p className="text-center bg-fha py-1 text-white text-sm">{title}</p>
+            <div className="h-auto p-4 flex flex-col items-center">
                 {children}
             </div>
         </div>

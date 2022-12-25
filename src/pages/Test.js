@@ -7,6 +7,8 @@ import {
 } from '../components/Table/Table'
 
 import StaffData from '../fakeData/StaffData';
+// import ActivityData from '../fakeData/ActivityData';
+
 import { Button, ButtonTransparent } from '../components/Button';
 
 import {
@@ -25,6 +27,8 @@ import {
     PopupAction,
 } from '../components/Popup';
 
+import QRcode from '../components/QRcode';
+
 import { HiOutlinePencil } from 'react-icons/hi';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { BsThreeDots } from 'react-icons/bs';
@@ -35,7 +39,8 @@ function Test() {
         dropdown: false,
         popup: false,
     })
-    console.log(state);
+
+    console.log(StaffData)
 
     return (
         <div className="w-full min-h-screen bg-fha flex justify-center items-center">
@@ -107,6 +112,11 @@ function Test() {
                             </PopupAction>
                         </PopupCard>
                     </Popup>
+                </div>
+
+                <div className="mt-6">
+                    <p className="font-bold">QRcode</p>
+                    <QRcode />
                 </div>
             </div>
         </div>
