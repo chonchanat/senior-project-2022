@@ -40,6 +40,7 @@ function CustomerHome() {
                     <Card title="แผนที่" bgColor="#E38181" link="/customer-map" />
                     <Card title="กิจกรรมทั้งหมด" bgColor="#F7EB84" link="/customer-activity" />
                 </div>
+                <input type="file" accept="image/*" capture="environment"></input>
             </BlockMobile>
         </div>
     );
