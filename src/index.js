@@ -7,10 +7,18 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from './reducers/reducer';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const store = createStore(reducer)
+
 root.render(
   <React.StrictMode>
-    <RouterProvider router={App} />
+    <Provider store={store}>
+      <RouterProvider router={App} />
+    </Provider>
   </React.StrictMode>
 );
 

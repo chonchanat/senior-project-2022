@@ -33,6 +33,8 @@ import { HiOutlinePencil } from 'react-icons/hi';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { BsThreeDots } from 'react-icons/bs';
 
+import { connect } from 'react-redux';
+
 function Test() {
 
     const [state, setState] = useState({
@@ -40,7 +42,8 @@ function Test() {
         popup: false,
     })
 
-    console.log(StaffData)
+    const reducerData = mapStateToProps;
+    console.log(reducerData)
 
     return (
         <div className="w-full min-h-screen bg-fha flex justify-center items-center">
@@ -118,9 +121,28 @@ function Test() {
                     <p className="font-bold">QRcode</p>
                     <QRcode />
                 </div>
+
+                <div className="mt-6">
+                    <p className="font-bold">REDUCER</p>
+
+                </div>
             </div>
         </div>
     );
 }
 
-export default Test;
+const mapStateToProps = state => {
+    return {
+        stateFromStore: state.data
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        dispatchFromStore: () => {
+            return dispatch({type: 'MY_ACTION'});
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (Test);
