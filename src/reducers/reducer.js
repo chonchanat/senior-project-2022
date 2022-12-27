@@ -21,6 +21,13 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 data: addData,
             }
+        case 'REMOVE_DATA':
+            const removeData = state.data.filter(item => item.id !== action.payload);
+            console.log('removed', action.payload)
+            return {
+                ...state,
+                data: removeData,
+            }
         default:
             break;
     }

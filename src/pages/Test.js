@@ -33,7 +33,8 @@ import { HiOutlinePencil } from 'react-icons/hi';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { BsThreeDots } from 'react-icons/bs';
 
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { addData, removeData } from '../actions/reducerAction';
 
 function Test() {
 
@@ -42,7 +43,8 @@ function Test() {
         popup: false,
     })
 
-    const reducerData = mapStateToProps;
+    const reducerData = useSelector(state => state.data);
+    const dispatch = useDispatch();
     console.log(reducerData)
 
     return (
@@ -124,25 +126,21 @@ function Test() {
 
                 <div className="mt-6">
                     <p className="font-bold">REDUCER</p>
-
+                    <p onClick={() => dispatch(addData({
+                        id: 1,
+                        name: "Chonchanat",
+                        score: 12,
+                    }))}>add</p>
+                    <p onClick={() => dispatch(removeData(1))}>remove</p>
+                    {reducerData.map(data => (
+                        <div key={data.id}>
+                            <p>{data.name}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
     );
 }
 
-const mapStateToProps = state => {
-    return {
-        stateFromStore: state.data
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        dispatchFromStore: () => {
-            return dispatch({type: 'MY_ACTION'});
-        }
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps) (Test);
+export default Test;
