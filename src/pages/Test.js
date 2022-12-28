@@ -42,10 +42,11 @@ function Test() {
         dropdown: false,
         popup: false,
     })
-
-    const reducerData = useSelector(state => state.data);
+    
     const dispatch = useDispatch();
-    console.log(reducerData)
+    const rootReducer = useSelector(state => state);
+    const reducerData = useSelector(state => state.reducer);
+    console.log(rootReducer)
 
     return (
         <div className="w-full min-h-screen bg-fha flex justify-center items-center">

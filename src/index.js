@@ -8,11 +8,15 @@ import {
 } from "react-router-dom";
 
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducer from './reducers/reducer';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+import { rootReducer } from './reducers/rootReducer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const store = createStore(reducer)
+
+const middlewares = [thunk]
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)))
 
 root.render(
   <React.StrictMode>
