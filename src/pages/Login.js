@@ -12,8 +12,8 @@ function CustomerLogin() {
     return (
         <div className="h-screen bg-fha flex items-center justify-center">
             <div>
-                <div className="w-80 h-full px-6 pb-20">
-                    <div className="pb-24">
+                <div className="w-80 h-full px-6">
+                    <div className="pb-20">
                         <p className="text-center text-white text-3xl font-bold">Camel Republic</p>
                         <p className="text-right text-white text-sm pr-[26px]">SENIOR PROJECT</p>
                     </div>
@@ -29,10 +29,10 @@ function CustomerLogin() {
                             <input className="w-full py-2 px-4 rounded-md"
                                 placeholder="password"
                                 onChange={(e) => setUser({ ...user, password: e.target.value })} />
-                            <p className="text-right text-sm text-white pt-2 hover:underline">Forget Password?</p>
                         </div>
 
                         <Button title="Login" bgColor="bg-accept" font="font-bold" link="/customer-home" />
+                        <p className="text-right text-sm text-white pt-2 hover:underline">Forget Password?</p>
                     </div>
                 </div>
             </div>

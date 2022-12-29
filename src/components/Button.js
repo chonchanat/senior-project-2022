@@ -1,21 +1,8 @@
-import { useNavigate } from 'react-router-dom';
-
-function Button({ title, bgColor, textColor="text-white", width="w-full", font, link }) {
-    
-    const navigate = useNavigate();
-
-    function goToLink() {
-        if (link){
-            navigate("/customer-home")
-        }
-    }
-
+function Button({ children, bgColor, textColor = "text-white", width = "w-full", font, click }) {
     return (
-        <div>
-            <button className={`${bgColor} ${width} ${font} ${textColor} py-2 px-4 rounded-md text-sm drop-shadow-md`}
-                onClick={() => goToLink()}>
-                {title}
-            </button>
+        <div className={`${bgColor} ${width} ${font} ${textColor} flex justify-center py-2 px-4 rounded-md text-sm drop-shadow-md hover:cursor-pointer`}
+            onClick={click}>
+            {children}
         </div>
     );
 }

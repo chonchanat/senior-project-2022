@@ -15,11 +15,11 @@ function StarRating({ rating }) {
 
 function MobileList({ MyActivity, index }) {
     return (
-        <div className="py-3 flex hover:bg-hover" key={index} onClick={() => console.log(MyActivity)}>
-            <div className="h-full w-2/5 overflow-hidden">
+        <div className="py-2 flex h-fit border-b-2 border-[#E0E0E0] hover:bg-hover" key={index} onClick={() => console.log(MyActivity)}>
+            <div className="h-auto w-[30%] overflow-hidden flex items-center">
                 <img src={MyActivity.image} alt="iamge of activity" />
             </div>
-            <div className="w-3/5 pl-4">
+            <div className="w-[70%] pl-4">
                 <p className="font-bold">{MyActivity.nameOfAct}</p>
                 <div className="flex">
                     <StarRating rating={MyActivity.rating} />

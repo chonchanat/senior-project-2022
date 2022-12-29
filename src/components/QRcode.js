@@ -21,8 +21,8 @@ function QRcode() {
                 <p className="font-bold">{ActivityData[0].name}</p>
                 <QRCodeSVG
                     value={JSON.stringify(bookData)}
-                    size={256}
-                    bgColor={"#f8f8f8"}
+                    size={224}
+                    bgColor={"#FFFFFF"}
                     fgColor={"#000000"}
                     level={"L"}
                     includeMargin={true}

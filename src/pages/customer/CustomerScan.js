@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Navbar } from '../../components/Navbar';
 import { BlockMobile } from '../../components/Block'
@@ -9,6 +10,8 @@ import fakeData from '../../fakeData/fakeData';
 
 function CustomerScan() {
 
+    const navigate = useNavigate();
+
     const [numCustomer, setNumCustomer] = useState(1);
 
     function handlerNumCustomer(operation) {
@@ -17,6 +20,10 @@ function CustomerScan() {
         } else if (operation === "decrease" && numCustomer > 0) {
             setNumCustomer(numCustomer - 1);
         }
+    }
+
+    function handlerCancel() {
+        navigate('/customer-home');
     }
 
     return (
@@ -31,20 +38,20 @@ function CustomerScan() {
                         </div>
                         <p className="mt-6 text-sm">จำนวนผู้เข้าร่วม</p>
                         <div className="flex mt-4 bg-gray-200 rounded-lg h-[40px] items-center">
-                            <div className="w-[60px] text-center" onClick={() => handlerNumCustomer("increase")}>
-                                +
+                            <div className="mx-[16px] w-[28px] h-[28px] text-center border-[1px] border-gray-300 rounded-full" onClick={() => handlerNumCustomer("decrease")}>
+                                -
                             </div>
-                            <div className="w-[100px] text-center border-r-2 border-l-2 border-gray-400">
+                            <div className="w-[100px] text-center border-[1px] rounded-lg border-gray-300 font-bold">
                                 {numCustomer}
                             </div>
-                            <div className="w-[60px] text-center" onClick={() => handlerNumCustomer("decrease")}>
-                                -
+                            <div className="mx-[16px] w-[28px] h-[28px] text-center border-[1px] border-gray-300 rounded-full" onClick={() => handlerNumCustomer("increase")}>
+                                +
                             </div>
                         </div>
                         <p className="mt-4 text-xs">สิทธิเข้าร่วมที่เหลือ {"5"} คน</p>
                         <div className="flex w-[220px] justify-between mt-8 mb-4">
-                            <Button title="ตกลง" bgColor="bg-accept" width="w-[100px]" />
-                            <Button title="ยกเลิก" bgColor="bg-decline" width="w-[100px]" />
+                            <Button bgColor="bg-accept" width="w-[100px]">ตกลง</Button>
+                            <Button bgColor="bg-decline" width="w-[100px]" click={handlerCancel}>ยกเลิก</Button>
                         </div>
                     </div>
                 </CardWithHead>

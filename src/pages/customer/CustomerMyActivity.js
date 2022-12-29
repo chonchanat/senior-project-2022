@@ -9,7 +9,10 @@ function CustomerMyActivity() {
         <div>
             <Navbar />
             <BlockMobile>
-                <p className="text-right text-sm mb-4">กิจกรรมที่จอง 4/5</p>
+                <div className="flex justify-between items-end my-2">
+                <p className="">รายการคิวทั้งหมดของคุณ</p>
+                <p className="text-sm">กิจกรรมที่จอง 4/5</p>
+                </div>
                 <div className="overflow-hidden overflow-y-auto">
                     {fakeData.map((data, index) => {
                         return (

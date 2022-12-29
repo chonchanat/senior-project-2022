@@ -1,4 +1,6 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 function Navbar() {
 
@@ -6,8 +8,9 @@ function Navbar() {
 
     return (
         <>
-            <div className="h-[50px] w-full bg-fha fixed top-0 z-50 flex items-center px-4">
-                <p className="text-lg sm:text-2xl font-bold text-white" onClick={() => navigate("/customer-home")}>Camel Republic</p>
+            <div className="h-[44px] w-full bg-fha fixed top-0 z-50 flex justify-between items-center px-4">
+                <p className="text-lg sm:text-2xl font-bold text-white" onClick={() => navigate("/customer-home")}>Ku Que</p>
+                <GiHamburgerMenu style={{"color": "white"}} size="24px" />
             </div>
         </>
     );
